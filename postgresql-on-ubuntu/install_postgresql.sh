@@ -135,7 +135,7 @@ configure_streaming_replication() {
 		echo "CREATE USER replicator WITH REPLICATION PASSWORD '$PGPASSWORD';"
 		sudo -u postgres psql -c "CREATE USER replicator WITH REPLICATION PASSWORD '$PGPASSWORD';"
 		
-		sudo mv /var/lib/postgresql/9.3/main /var/lib/kafkadir
+		# sudo mv /var/lib/postgresql/9.3/main /var/lib/kafkadir
 	fi
 
 	# Stop service
@@ -188,7 +188,7 @@ configure_streaming_replication() {
 		# Remove all files from the slave data directory
 		logger "Remove all files from the slave data directory"
 		
-		sudo mv /var/lib/postgresql/9.3/main /var/lib/kafkadir
+		#sudo mv /var/lib/postgresql/9.3/main /var/lib/kafkadir
 
 		sudo -u postgres rm -rf /var/lib/kafkadir/main
 
