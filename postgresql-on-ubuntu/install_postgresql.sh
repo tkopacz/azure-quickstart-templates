@@ -135,7 +135,7 @@ configure_streaming_replication() {
 		echo "CREATE USER replicator WITH REPLICATION PASSWORD '$PGPASSWORD';"
 		sudo -u postgres psql -c "CREATE USER replicator WITH REPLICATION PASSWORD '$PGPASSWORD';"
 		
-		sudo mv /var/lib/postgresql/9.3/main /var/lib/kafkadir
+		#sudo mv /var/lib/postgresql/9.3/main /var/lib/kafkadir
 	fi
 
 	# Stop service
