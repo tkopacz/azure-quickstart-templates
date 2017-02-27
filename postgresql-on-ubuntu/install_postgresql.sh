@@ -190,7 +190,7 @@ configure_streaming_replication() {
 		
 		#sudo mv /var/lib/postgresql/9.3/main /var/lib/kafkadir
 
-		sudo -u postgres rm -rf /var/lib/kafkadir/main
+		#sudo -u postgres rm -rf /var/lib/kafkadir/main
 
 		# Make a binary copy of the database cluster files while making sure the system is put in and out of backup mode automatically
 		logger "Make binary copy of the data directory from master"
